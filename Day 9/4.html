@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> 4 </title>
+</head>
+<body>
+<center>
+	<label>Enter Languages</label>
+	<br>
+	<br>
+	<input type="text" id="i1">
+	<br>
+	<br>
+	<h1 id="ans"></h1>
+</center>
+</body>
+</html>
+<script type="text/javascript">
+	let a = document.getElementById("i1").value
+	let result
+
+	switch(a)
+	{
+		case 'english' : result = `Hello`
+		break
+		case 'spanish' : result = `iHola!`
+		break
+		case 'french' : result = `Bonjour!`
+		break
+		default : result = `Language Not Supported !`
+	}
+	document.getElementById("ans").innerHTML=result
+</script>

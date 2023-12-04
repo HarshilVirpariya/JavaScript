@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> 1 </title>
+</head>
+<body>
+<center>
+	<h1>Day Of The Week</h1>
+	<br>
+	<br>
+	<input type="text" id="in">
+	<br>
+	<br>
+	<h1 id="ans"></h1>
+</center>
+</body>
+</html>
+<script type="text/javascript">
+	let day = document.getElementById("in").value
+	let dayname
+
+	switch(parseInt(day))
+	{
+		case 1 : dayname = "MONDAY"
+		dayname += "Start Of Work Day"
+		break
+		case 2 : dayname = "TUESDAY"
+		dayname += "It's Some Other Day"
+		break
+		case 3 : dayname = "WEDNESDAY"
+		dayname += "It's Some Other Day"
+		break
+		case 4 : dayname = "THURSDAY"
+		dayname += "It's Some Other Day"
+		break
+		case 5 : dayname = "FRIDAY"
+		dayname += "It's almost the weekend!"
+		break
+		case 6 : dayname = "SATURDAY"
+		dayname += "It's weekend!"
+		break
+		case 7 : dayname = "SUNDAY"
+		dayname += "It's weekend!"
+		break
+		default : dayname = "Enter Valid Day Name !!!"
+	}
+	console.log("Today Is : ", dayname)
+
+</script>

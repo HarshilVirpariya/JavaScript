@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> 2 </title>
+</head>
+<body>
+<center>
+	<label>Enter Frist Number : </label>
+	<br>
+	<br>
+	<input type="Number" id="i1">
+	<br>
+	<br>
+	<label>Enter Second Number : </label>
+	<br>
+	<br>
+	<input type="Number" id="i2">
+	<br>
+	<br>
+	<label>Enter Sign You Want To calculate</label>
+	<br>
+	<br>
+	<input type="text" id="i3">
+</center>
+</body>
+</html>
+<script type="text/javascript">
+	let a = document.getElementById("i1").value
+	let b = document.getElementById("i2").value
+	let c = document.getElementById("i3").value
+	let answer
+
+	switch(c)
+	{
+		case '+' : answer = +a + +b
+		break;
+		case '-' : answer = +a - +b
+		break
+		case '*' : answer = +a * +b
+		break
+		case '/' : answer = +a / +b
+		break
+		default : answer = "Enter Valid Number !!!"
+	}
+	console.log(`${answer}`)
+</script>
