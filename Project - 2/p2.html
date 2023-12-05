@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> P2 </title>
+</head>
+<body>
+<center>
+	<h1>Day Of The Week</h1>
+	<br>
+	<br>
+	<input type="text" id="in">
+	<br>
+	<br>
+	<h1 id="ans"></h1>
+</center>
+</body>
+</html>
+<script type="text/javascript">
+	let day = document.getElementById("in").value
+	let dayname
+
+	switch(parseInt(day))
+	{
+		case 1 : dayname = "SUNDAY"
+		break
+		case 2 : dayname = "MONDAY"
+		break
+		case 3 : dayname = "TUESDAY"
+		break
+		case 4 : dayname = "WEDNESDAY"
+		break
+		case 5 : dayname = "THURSDAY"
+		break
+		case 6 : dayname = "FRIDAY"
+		break
+		case 7 : dayname = "SATURDAY"
+		break
+		default : dayname = "Enter Valid Input !!!"
+	}
+	document.getElementById("ans").innerHTML = `${dayname}`
+
+</script>
