@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> 1 </title>
+</head>
+<body>
+
+	<h1>Frist H1</h1>
+	<h1>Second H1</h1>
+	<h1>Third H1</h1>
+	<br>
+	<h3>Frist H3</h3>
+	<h3>Second H3</h3>
+	<h3>Third H3</h3>
+	<br>
+	<h5>Frist H5</h5>
+	<h5>Second H5</h5>
+	<h5>Third H5</h5>
+	<h5>Forth H5</h5>
+
+	<button onclick="chgbtn1()">Change To Red</button>
+	<button onclick="chgbtn2()">Change To Yellow</button>
+	<button onclick="chgbtn3()">Change To Blue</button>
+
+	<hr>
+	<hr>
+
+	<p class="green">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+	<br>
+	<p class="blue">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+	<br>
+	<p class="red">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+
+	<button onclick="chgclassbtn1()">Change To Green</button>
+	<button onclick="chgclassbtn2()">Change To Blue</button>
+	<button onclick="chgclassbtn3()">Change To Red</button>
+
+
+
+</body>
+</html>
+<script type="text/javascript">
+	
+	function chgbtn1()
+	{
+		var head1 = document.querySelectorAll('h1')
+		for(let i = 0 ; i < head1.length ; i++)
+		{
+			head1[i].style.color="red"
+			// head1[i].style.background="gray"
+		}
+	}
+
+	function chgbtn2()
+	{
+		var head2 = document.querySelectorAll('h3')
+		for(let i = 0 ; i < head2.length ; i++)
+		{
+			head2[i].style.color="yellow"
+			// head2[i].style.background="black"
+		}
+		
+	}
+
+	function chgbtn3()
+	{
+		var head3 = document.querySelectorAll('h5')
+		for(let i = 0 ; i < head3.length ; i++)
+		{
+			head3[i].style.color="blue"
+			// head3[i].style.background="yellow"
+		}
+	}
+
+
+	function chgclassbtn1()
+	{
+		var head4 = document.querySelectorAll('.green')
+		for(let i = 0 ; i < head4.length ; i++)
+		{
+			head4[i].style.color="green"
+			// head4[i].style.background="gray"
+		}
+	}
+
+	function chgclassbtn2()
+	{
+		var head5 = document.querySelectorAll('.blue')
+		for(let i = 0 ; i < head5.length ; i++)
+		{
+			head5[i].style.color="blue"
+			// head5[i].style.background="gray"
+		}
+	}
+
+	function chgclassbtn3()
+	{
+		var head6 = document.querySelectorAll('.red')
+		for(let i = 0 ; i < head6.length ; i++)
+		{
+			head6[i].style.color="red"
+			// head6[i].style.background="gray"
+		}
+	}
+
+</script>
