@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> 1 </title>
+</head>
+<body>
+<center>
+	
+	<label>Enter 1st Value : </label>
+	<input type="text" placeholder="Enter 1st Number : " id="in1">
+	<br><br>
+	<label>Enter 2nd Value : </label>
+	<input type="text" placeholder="Enter 2nd Number : " id="in2">
+	<br><br>
+	<label>Enter 3rd Value : </label>
+	<input type="text" placeholder="Enter 3rd Number : " id="in3">
+	<br><br>
+	<label>Enter 4th Value : </label>
+	<input type="text" placeholder="Enter 4th Number : " id="in4">
+	<br><br><br>
+	<h1 id="ans"></h1>
+	<br>
+	<hr>
+	<br>
+	<button onclick="addition()">addition</button>
+	<button onclick="subraction()">subraction</button>
+	<button onclick="multiplication()">multiplication</button>
+	<br>
+	<hr>
+	<br>
+	<label>Enter 1st Value : </label>
+	<input type="text" placeholder="Enter 1st Number : " id="in-1">
+	<br><br>
+	<label>Enter 2nd Value : </label>
+	<input type="text" placeholder="Enter 2nd Number : " id="in-2">
+	<br><br><br>
+	<h1 id="ans-2"></h1>
+	<br>
+	<hr>
+	<br>
+	<button onclick="division()">division</button>
+
+</center>
+</body>
+</html>
+<script type="text/javascript">
+	
+	function addition()
+	{
+		var n1 = document.getElementById('in1').value
+		var n2 = document.getElementById('in2').value
+		var n3 = document.getElementById('in3').value
+		var n4 = document.getElementById('in4').value
+
+		var add = +n1 + +n2 + +n3 + +n4
+
+		document.getElementById('ans').innerHTML = "Addition Is : " + add	
+	}
+
+	function subraction()
+	{
+		var n1 = document.getElementById('in1').value
+		var n2 = document.getElementById('in2').value
+		var n3 = document.getElementById('in3').value
+		var n4 = document.getElementById('in4').value
+
+		var sub = +n1 - +n2 - +n3 - +n4
+
+		document.getElementById('ans').innerHTML = "Subtraction Is : " + sub	
+	}
+
+	function multiplication()
+	{
+		var n1 = document.getElementById('in1').value
+		var n2 = document.getElementById('in2').value
+		var n3 = document.getElementById('in3').value
+		var n4 = document.getElementById('in4').value
+
+		var mul = +n1 * +n2 * +n3 * +n4
+
+		document.getElementById('ans').innerHTML = "Multiplication Is : " + mul	
+	}
+
+	function division()
+	{
+		var n1 = document.getElementById('in1').value
+		var n2 = document.getElementById('in2').value
+
+		var div = +n1 / +n2
+
+		document.getElementById('ans-2').innerHTML = "Division Is : " + div	
+	}
+	
+
+
+
+</script>
