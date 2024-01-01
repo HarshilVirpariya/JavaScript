@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> 3 </title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+	
+	function age(Age)
+	{
+		if(Age < 18)
+		{
+			throw new Error ("Not eligible to vote")
+		}
+		else
+		{
+			console.log("Valid Age For Voting : ",Age)
+		}
+	}
+
+	try
+	{
+		age("17")
+	}
+	catch(a)
+	{
+		console.log("Error : ",a.message)
+	}
+
+
+</script>
