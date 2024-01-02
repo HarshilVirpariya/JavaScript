@@ -1,0 +1,29 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	font-family: cursive;
+}
+form{
+	margin-top: 2%;
+}
+input{
+	height: 30px;
+	width: 30%;
+	border: 2px solid black;
+	text-align: center;
+	border-radius: 5px 5px 5px 5px;
+}
+label{
+	font-size: 20px;
+}
+button{
+	height: 40px;
+	width: 20%;
+	border-radius: 5px 5px 5px 5px;
+	margin-top: 2%;
+	border: 2px solid black;
+	background: transparent;
+}
