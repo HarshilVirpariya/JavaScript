@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> 3 </title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+
+	class Animal
+	{
+		constructor(Name,Weight,Speed,Color)
+		{
+			this.Name = Name
+			this.Weight = Weight
+			this.Speed = Speed
+			this.Color = Color
+		}
+	}
+
+	const c1 = new Animal("LION" , 60 , "100 KM/H" , "ORANGE")
+	const c2 = new Animal("TIGER" , 60 , "120 KM/H" , "YELLOW")
+
+	class SubAnimal extends Animal
+	{
+		constructor(Name,Weight,Speed,Color,Living)
+		{
+			super( Name , Weight , Speed , Color )
+			this.Living = Living
+		}
+	}
+
+	const c3 = new SubAnimal("COW" , 70 , "10 KM/H" , "BROWN" , "COW SHED");
+	const c4 = new SubAnimal("GOAT" , 30 , "5 KM/H" , "WHITE" , "LOAFING SHED");
+
+	console.log(c1)
+	console.log(c2)
+	console.log(c3)
+	console.log(c4)
+
+</script>

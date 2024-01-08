@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> 2 </title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+
+	class Person
+	{
+		constructor(Name,Age,Height,Weight)
+		{
+			this.Name = Name
+			this.Age = Age
+			this.Height = Height
+			this.Weight = Weight
+		}
+	}
+
+	const c1 = new Person("VIVEK" , 20 , 5.6 , 87)
+	const c2 = new Person("SARTHI" , 18 , 4.8 , 40)
+
+	class SubPerson extends Person
+	{
+		constructor(Name,Age,Height,Weight,Work)
+		{
+			super( Name , Age , Height , Weight )
+			this.Work = Work
+		}
+	}
+
+	const c3 = new SubPerson("PREM" , 19 , 6.0 , 68 , "BEROZGAR");
+	const c4 = new SubPerson("MEET" , 18 , 5.8 , 70 , "FULLSTACK DEVELOPER");
+
+	console.log(c1)
+	console.log(c2)
+	console.log(c3)
+	console.log(c4)
+
+</script>

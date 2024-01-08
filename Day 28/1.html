@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> 1 </title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+
+	class Car
+	{
+		constructor(Brand,Name,Color,Price)
+		{
+			this.Brand = Brand
+			this.Name = Name
+			this.Color = Color
+			this.Price = Price
+		}
+	}
+
+	const c1 = new Car("TATA" , "Harrier" , "DARK" , 3000000)
+	const c2 = new Car("TATA" , "SAFARI" , "DARK" , 5000000)
+
+	class SubCar extends Car
+	{
+		constructor(Brand,Name,Color,Price,Engine)
+		{
+			super(Brand , Name , Color , Price)
+			this.Engine = Engine
+		}
+	}
+
+	const c3 = new SubCar("TATA" , "NEXON" , "DARK" , 2500000 , "2500 CC");
+	const c4 = new SubCar("TATA" , "TIGOR" , "DARK" , 2000000 , "5000 CC");
+
+	console.log(c1)
+	console.log(c2)
+	console.log(c3)
+	console.log(c4)
+
+</script>
