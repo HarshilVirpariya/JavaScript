@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> 2 </title>
+
+    <!--CSS Link-->
+    <link rel="stylesheet" type="text/css" href="2style.css">
+    <!--CSS Link-->
+
+    <!--Remix Icon CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <!--Remix Icon CDN-->
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch:wght@300&family=Kanit:wght@100&family=Lumanosimo&family=Tektur&family=Ysabeau+SC:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100&family=Chakra+Petch:wght@300&family=Kanit:wght@100&family=Michroma&family=Ysabeau+SC:wght@200&display=swap" rel="stylesheet">
+    <!--Google Fonts-->
+
+</head>
+<body>
+<div>
+    <img src="img/h1_hero1.jpg" id="img-1">
+    <img src="img/h1_hero2.jpg" id="img-1">
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    
+    let sliders = document.querySelectorAll("#img-1")
+    let sliderindex = 0
+
+    function showsliders(index)
+    {
+        for(i = 0 ; i < sliders.length ; i++)
+        {
+            sliders[i].style.display="none";
+        }
+        sliders[index].style.display="block";
+    }
+    function startsliders()
+    {
+        setInterval(()=>{
+            showsliders(sliderindex)
+            sliderindex++
+
+            if(sliderindex >= sliders.length)
+            {
+                sliderindex = 0
+            }
+        },2000)
+    }
+    startsliders()
+    showsliders(sliderindex)
+
+</script>

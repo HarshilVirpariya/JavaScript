@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> 1 </title>
+
+	<!--CSS Link-->
+	<link rel="stylesheet" type="text/css" href="1style.css">
+	<!--CSS Link-->
+
+	<!--Remix Icon CDN-->
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+	<!--Remix Icon CDN-->
+
+	<!--Google Fonts-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch:wght@300&family=Kanit:wght@100&family=Lumanosimo&family=Tektur&family=Ysabeau+SC:wght@200&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100&family=Chakra+Petch:wght@300&family=Kanit:wght@100&family=Michroma&family=Ysabeau+SC:wght@200&display=swap" rel="stylesheet">
+	<!--Google Fonts-->
+
+</head>
+<body>
+<header>
+	<div class="head-1">
+		<img src="img/logo.png" id="logo">
+	</div>
+	<div class="head-2">
+		<input type="text" placeholder="Search For Products, Brands And More" id="inp-1">
+		<i class="ri-search-2-line" id="search"></i>
+	</div>
+	<div class="head-3">
+		<div class="sb-head-1">
+			<i class="ri-account-circle-line"></i>
+			<p>Login</p>
+		</div>
+		<div class="sb-head-2">
+			<i class="ri-shopping-cart-2-line"></i>
+			<p>Cart</p>
+		</div>
+		<div class="sb-head-3">
+			<i class="ri-store-line"></i>
+			<p>Become a Seller</p>
+		</div>
+		<div class="sb-head-4">
+			<i class="ri-more-2-fill"></i>
+		</div>
+	</div>
+</header>
+<div class="product">
+	<div class="sb-prod-1">
+		<img src="img/pro-1.png">
+		<p>Grocery</p>
+	</div>
+	<div class="sb-prod-1">
+		<img src="img/pro-2.png">
+		<p>Mobile</p>
+	</div>
+	<div class="sb-prod-1">
+		<img src="img/pro-3.png">
+		<p>Fashion</p>
+	</div>
+	<div class="sb-prod-1">
+		<img src="img/pro-4.png">
+		<p>Electronics</p>
+	</div>
+	<div class="sb-prod-1">
+		<img src="img/pro-5.jpg">
+		<p>Home & Furniture</p>
+	</div>
+	<div class="sb-prod-1">
+		<img src="img/pro-6.jpg">
+		<p>Applinces</p>
+	</div>
+	<div class="sb-prod-1">
+		<img src="img/pro-7.png">
+		<p>Travel</p>
+	</div>
+	<div class="sb-prod-1">
+		<img src="img/pro-8.png">
+		<p>Toys</p>
+	</div>
+	<div class="sb-prod-1">
+		<img src="img/pro-9.png">
+		<p>Two wheel Toys</p>
+	</div>
+</div>
+<div>
+	<img src="img/slide-1.jpg" id="img-1">
+	<img src="img/slide-2.jpg" id="img-1">
+	<img src="img/slide-3.jpg" id="img-1">
+	<img src="img/slide-4.jpg" id="img-1">
+	<img src="img/slide-5.jpg" id="img-1">
+</div>
+</body>
+</html>
+<script type="text/javascript">
+	
+	let sliders = document.querySelectorAll("#img-1")
+	let sliderindex = 0
+
+	function showsliders(index)
+	{
+		for(i = 0 ; i < sliders.length ; i++)
+		{
+			sliders[i].style.display="none";
+		}
+		sliders[index].style.display="block";
+	}
+	function startsliders()
+	{
+		setInterval(()=>{
+			showsliders(sliderindex)
+			sliderindex++
+
+			if(sliderindex >= sliders.length)
+			{
+				sliderindex = 0
+			}
+		},2000)
+	}
+	startsliders()
+	showsliders(sliderindex)
+
+</script>
