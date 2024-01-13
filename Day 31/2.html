@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 2 </title>
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch:wght@300&family=Kanit:wght@100&family=Lumanosimo&family=Tektur&family=Ysabeau+SC:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100&family=Chakra+Petch:wght@300&family=Kanit:wght@100&family=Michroma&family=Ysabeau+SC:wght@200&display=swap" rel="stylesheet">
+    <!--Google Fonts-->
+
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .main{
+        background-color: black;
+        height: 100vh;
+        width: 100%;
+        border: 1px solid black;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .submain{
+        width: 60%;
+        height: 350px;
+        background-color: aqua;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+    }
+    .h5{
+        font-size: 50px;
+        font-weight: 900;
+        letter-spacing: 3px;
+        font-family: 'Advent Pro', sans-serif
+        /*font-family: 'Bebas Neue', sans-serif;*/
+        /*font-family: 'Chakra Petch', sans-serif;*/
+        /*font-family: 'Kanit', sans-serif;*/
+        /*font-family: 'Michroma', sans-serif;*/
+        /*font-family: 'Tektur', cursive;*/
+        /*font-family: 'Ysabeau SC', sans-serif;*/
+    }
+    .subhi{
+        width: 100%;
+        height: 250px;
+        display: flex;
+        /* border: 1px solid black; */
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .subh{
+        flex-basis: 20%;
+        height: 200px;
+        border-radius: 10px;
+        background-color: black;
+        color: white;
+        border: 1px solid black;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+    }
+    h1{
+        font-size: 100px;
+        font-family: 'Advent Pro', sans-serif
+        /*font-family: 'Bebas Neue', sans-serif;*/
+        /*font-family: 'Chakra Petch', sans-serif;*/
+        /*font-family: 'Kanit', sans-serif;*/
+        /*font-family: 'Michroma', sans-serif;*/
+        /*font-family: 'Tektur', cursive;*/
+        /*font-family: 'Ysabeau SC', sans-serif;*/
+    }
+    h3{
+        font-size: 30px;
+        letter-spacing: 3px;
+        text-transform: capitalize;
+        font-family: 'Advent Pro', sans-serif
+        /*font-family: 'Bebas Neue', sans-serif;*/
+        /*font-family: 'Chakra Petch', sans-serif;*/
+        /*font-family: 'Kanit', sans-serif;*/
+        /*font-family: 'Michroma', sans-serif;*/
+        /*font-family: 'Tektur', cursive;*/
+        /*font-family: 'Ysabeau SC', sans-serif;*/
+    }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="submain">
+            <h5 class="h5">OUR SALE ENDES IN :</h5>
+            <div class="subhi">
+                <div class="subh">
+                    <h1>03</h1>
+                    <h3>days</h3>
+                </div>
+                <div class="subh"><h1>16</h1>
+                    <h3>hours</h3>
+                </div>
+                <div class="subh">
+                    <h1>27</h1>
+                    <h3>minute</h3>
+                </div>
+                <div class="subh">
+                    <h1 id="countdown">60</h1>
+                    <h3>seconds</h3>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
+<script>
+     var countdown = document.getElementById("countdown")
+    var count = 60;
+    var stop;
+
+
+   stop = setInterval(()=>{
+        count--
+        countdown.innerHTML = count
+        if(count === 0){
+            
+            count=61
+        }
+    },1000)
+
+    // stop()
+
+</script>
