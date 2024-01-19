@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="stylesheet" href="https://fakestoreapi.com/products">
+    <style>
+
+        body{
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #main{
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+        #photo{
+            width: 450px;
+            height: 450px;
+            margin-top: 5%;
+            transition: 0.5s;
+        }
+        #photo:hover{
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div id="cart"></div>
+    <div id="main">
+
+    </div>
+
+    
+
+</body>
+</html>
+<script>
+    let data = [
+        {    id :1,
+            title   :"Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+            price : 109.95,
+            image : "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+        
+        },
+        {  id:2,
+            title   :"Mens Casual Premium Slim Fit T-Shirts ",
+            price :55.99,
+            image : "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg"
+
+        },
+        {
+            id :3,
+            title : "John Hardy Women's Gold & Silver Chain Bracelet",
+            price : 695,
+            image :"https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg"              
+        },
+        {
+            id:4,
+            title : "White Gold Plated Princess",
+            price : 9.99,
+            image:  "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg"
+        }
+    ]
+
+    let cartbtn=document.createElement("button")
+    cartbtn.innerHTML="cart"
+    
+
+    document.getElementById("cart").append(cartbtn)
+
+    cartbtn.addEventListener("click",function(){
+
+        window.open("pr2.html")
+    })
+
+    function displayData(data)
+    {
+        document.getElementById("main").innerHTML=""
+        data.map((el,i)=>{
+           
+            let div=document.createElement("div")
+
+           let pic=document.createElement("img")
+
+           pic.setAttribute("src",el.image)
+           pic.setAttribute("id","photo")
+
+          let name=document.createElement("h4")
+           
+          name.innerHTML=el.title
+
+          let pr=document.createElement("h2")
+
+          pr.innerText="Rs. "+el.price
+
+
+          let btn=document.createElement("button")
+          btn.innerHTML="Add to Cart"
+          
+          btn.addEventListener("click",function(){
+              addTocart(i)
+          })
+
+          div.append(pic,name,pr,btn)
+
+          document.querySelector("#main").append(div)
+        })
+    }
+
+    displayData(data);
+
+   function addTocart(index)
+   {
+      let product=data.filter((el,i)=>{
+        return i===index
+      })
+      
+      let products=JSON.parse(localStorage.getItem("cart")) || []
+
+      products.push(product[0])
+      localStorage.setItem("cart",JSON.stringify(products))
+   }
+
+
+</script>
