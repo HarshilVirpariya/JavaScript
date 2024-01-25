@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Week 5 </title>
+
+	<!--CSS Link-->
+	<link rel="stylesheet" type="text/css" href="week5style.css">
+	<!--CSS Link-->
+
+	<!--Font Awesome CDN-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+	<!--Font Awesome CDN-->
+
+	<!--BOOTSTRAP-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+ 
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+	<!--BOOTSTRAP-->
+
+	<!--Google Fonts-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch:wght@300&family=Kanit:wght@100&family=Lumanosimo&family=Tektur&family=Ysabeau+SC:wght@200&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100&family=Chakra+Petch:wght@300&family=Kanit:wght@100&family=Michroma&family=Ysabeau+SC:wght@200&display=swap" rel="stylesheet">
+	<!--Google Fonts-->
+
+	<!--Jquery CDN-->
+	<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+	<!--Jquery CDN-->
+
+	<!--Remix Icon CDN-->
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+	<!--Remix Icon CDN-->
+
+	<!--WayPoint Js CDN-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<!--WayPoint Js CDN-->
+
+	<!--Counter Js CDN-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js" integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<!--Counter Js CDN-->
+
+	<!--Animated CSS-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<!--Animated CSS-->
+
+</head>
+<body>
+<header>
+	<div class="head-1">
+		<img src="img/logo.png" id="logo">
+	</div>
+	<div class="head-2">
+		<input type="text" placeholder="Search For Product" id="input-1">
+		<i class="ri-search-2-line" id="search"></i>
+		<i class="ri-mic-line" id="voice"></i>
+	</div>
+	<div class="head-3">
+		<i class="ri-user-3-line" id="user"></i>
+		<i class="ri-shopping-cart-2-line" id="cart"></i>
+	</div>
+</header>
+<div class="nav">
+	<a href="#">Skin</a>
+	<a href="#">Body</a>
+	<a href="#">Hair</a>
+	<a href="#">Makeup</a>
+	<a href="#">Fragrances</a>
+	<a href="#">Combos Blog & Newsletters</a>
+	<a href="#">Get To Know Us</a>
+	<a href="#">Help</a>
+</div>
+<div>
+	<img src="img/img-1.webp" id="img">
+	<img src="img/img-2.webp" id="img">
+	<img src="img/img-3.webp" id="img">
+	<img src="img/img-4.webp" id="img">
+</div>
+<div class="by">
+	<div class="by-1">
+		<div id="sub-by">
+			<img src="img/by-1.avif">
+		</div>
+		<div id="sub-by-2">
+			<a href="#">SkinCare</a>
+		</div>
+	</div>
+	<div class="by-2">
+		<div id="sub-by">
+			<img src="img/by-2.avif">
+		</div>
+		<div id="sub-by-2">
+			<a href="#">BodyCare</a>
+		</div>
+	</div>
+	<div class="by-3">
+		<div id="sub-by">
+			<img src="img/by-3.avif">
+		</div>
+		<div id="sub-by-2">
+			<a href="#">HairCare</a>
+		</div>
+	</div>
+	<div class="by-4">
+		<div id="sub-by">
+			<img src="img/by-4.avif">
+		</div>
+		<div id="sub-by-2">
+			<a href="#">Makeup</a>
+		</div>
+	</div>
+	<div class="by-5">
+		<div id="sub-by">
+			<img src="img/by-5.avif">
+		</div>
+		<div id="sub-by-2">
+			<a href="#">Fragrances</a>
+		</div>
+	</div>
+</div>
+<div class="deal">
+	<div class="deal-text">
+		<h1 id="deal-text-h1">Deal Of The Week</h1>
+	</div>
+	<div class="deal-btn">
+		<button id="btn-1">Today's Picks</button>
+		<button id="btn-2">New Launches</button>
+		<button id="btn-3">Super Savers</button>
+	</div>
+	<div class="product">
+		<div class="sub-pro">
+			<div class="pro-detail-1">
+				<div class="sub-detail-1">
+					<img src="img/pro-1.webp" id="img-1">
+					<div class="inner1">
+						<img src="img/pro-2.jpg" id="img-2">
+					</div>
+				</div>
+				<div class="sub-detail-2">
+					<div class="sub-detail-2-text">
+						<p id="sub-detail-2-p-1">
+							4854 reviews
+						</p>
+					</div><br>
+					<p id="sub-detail-2-p-2">
+						15% Vitamin C Face Serum With<br>
+						Mandarin<br><br> 
+						Boost Glow | Fades Dark Spots | <br>
+						Fights Hyperpigmentation
+					</p>
+					<button id="btn-4">20ml</button>
+					<p id="sub-detail-2-p-3">
+						₹ 550.0
+					</p>
+				</div>
+				<div class="sub-detail-3">
+					<button id="btn-5">Add To Cart</button>
+				</div>
+			</div>
+			<div class="pro-detail-2">
+				<div class="sub-detail-4">
+					<img src="img/pro-3.jpg" id="img-3">
+					<div class="inner2">
+						<img src="img/pro-4.webp" id="img-4">
+					</div>
+				</div>
+				<div class="sub-detail-5">
+					<div class="sub-detail-2-text">
+						<p id="sub-detail-2-p-1">
+							3228 reviews
+						</p>
+					</div><br>
+					<p id="sub-detail-2-p-2">
+						Green Tea Renewed Clarity <br>
+						Night Gel<br><br>
+						Fights Pimples | Controls Excess Oil | <br>
+						Hydrates Skin
+					</p>
+					<button id="btn-4">20ml</button>
+					<p id="sub-detail-2-p-3">
+						₹ 575.0
+					</p>
+				</div>
+				<div class="sub-detail-6">
+					<button id="btn-5">Add To Cart</button>
+				</div>
+			</div>
+			<div class="pro-detail-3">
+				<div class="sub-detail-7">
+					<img src="img/pro-5.webp" id="img-5">
+					<div class="inner3">
+						<img src="img/pro-6.webp" id="img-6">
+					</div>
+				</div>
+				<div class="sub-detail-8">
+					<div class="sub-detail-2-text">
+						<p id="sub-detail-2-p-1">
+							2494 reviews
+						</p>
+					</div><br>
+					<p id="sub-detail-2-p-2">
+						Green Tea Pore Cleansing <br>
+						Face Wash<br><br>
+						Fights Pimples | Controls Excess Oil |<br>
+						Unclogs Pores
+					</p>
+					<button id="btn-4">100ml</button>
+					<p id="sub-detail-2-p-3">
+						₹ 275.0
+					</p>
+				</div>
+				<div class="sub-detail-9">
+					<button id="btn-5">Add To Cart</button>
+				</div>
+			</div>
+			<div class="pro-detail-4">
+				<div class="sub-detail-10">
+					<img src="img/pro-7.webp" id="img-7">
+					<div class="inner4">
+						<img src="img/pro-8.webp" id="img-8">
+					</div>
+				</div>
+				<div class="sub-detail-11">
+					<div class="sub-detail-2-text">
+						<p id="sub-detail-2-p-1">
+							1855 reviews
+						</p>
+					</div><br>
+					<p id="sub-detail-2-p-2">
+						10% Niacinamide Face Serum <br>
+						with Rice Water<br><br>
+						Brightens | Fades Blemishes |<br>
+						Lightweight Milky Texture
+					</p>
+					<button id="btn-4">15ml</button>
+					<p id="sub-detail-2-p-3">
+						₹ 349.0
+					</p>
+				</div>
+				<div class="sub-detail-12">
+					<button id="btn-5">Add To Cart</button>
+				</div>
+			</div>
+		</div>
+		<button id="btn-6">View All</button>
+	</div>
+</div>
+<div class="plumster">
+	<div class="sub-plumster-1">
+		<h1 id="sub-plumster-1-h1">Plumster Speak</h1>
+	</div>
+	<div class="sub-plumster-2">
+		<div class="sub-plum">
+			<div class="plum-img">
+				<img src="img/i1.jpg">
+			</div>
+			<div class="plum-img">
+				<img src="img/i2.jpg">
+			</div>
+			<div class="plum-img">
+				<img src="img/i3.jpg">
+			</div>
+		</div>
+		<div class="sub-plum">
+			<div class="plum-img">
+				<img src="img/i4.jpg">
+			</div>
+			<div class="plum-img">
+				<img src="img/i5.jpg">
+			</div>
+			<div class="plum-img">
+				<img src="img/i6.jpg">
+			</div>
+		</div>
+		<div class="sub-plum">
+			<div class="plum-img">
+				<img src="img/i7.jpg">
+			</div>
+			<div class="plum-img">
+				<img src="img/i8.jpg">
+			</div>
+			<div class="plum-img">
+				<img src="img/i9.jpg">
+			</div>
+		</div>
+		<div class="sub-plum">
+			<div class="plum-img">
+				<img src="img/i10.jpg">
+			</div>
+			<div class="plum-img">
+				<img src="img/i11.jpg">
+			</div>
+		</div>
+	</div>
+</div>
+<div class="defeat">
+	<h1>Let's Defeat</h1>
+	<div class="sub-defeat-1">
+		<div class="sb-defeat">
+			<img src="img/nari-1.webp">
+			<p>Acne</p>
+		</div>
+		<div class="sb-defeat">
+			<img src="img/nari-2.webp">
+			<p>Dry Skin</p>
+		</div>
+		<div class="sb-defeat">
+			<img src="img/nari-3.webp">
+			<p>Pigmentation</p>
+		</div>
+		<div class="sb-defeat">
+			<img src="img/nari-4.webp">
+			<p>Signs Of Ageing</p>
+		</div>
+	</div>
+	<div class="sub-defeat-2">
+		<div class="sb-defeat">
+			<img src="img/nari-5.webp">
+			<p>Acne</p>
+		</div>
+		<div class="sb-defeat">
+			<img src="img/nari-6.webp">
+			<p>Dry Skin</p>
+		</div>
+		<div class="sb-defeat">
+			<img src="img/nari-7.webp">
+			<p>Pigmentation</p>
+		</div>
+		<div class="sb-defeat">
+			<img src="img/nari-8.webp">
+			<p>Signs Of Ageing</p>
+		</div>
+	</div>
+</div>
+<div class="skinbottle">
+	<div class="skin-1">
+		<img src="img/skin-1.png">
+	</div>
+	<div class="skin-1">
+		<img src="img/skin-2.jpg">
+	</div>
+	<div class="skin-1">
+		<img src="img/skin-3.jpg">
+	</div>
+	<div class="skin-1">
+		<img src="img/skin-4.jpg">
+	</div>
+</div>
+<div class="video">
+	<div class="sub-vid">
+		<div class="sub-sub-vid">
+			<video loop muted autoplay="autoplay" id="vid-1">
+				<source src="img/vid-1.mp4" type="video/mp4">
+			</video>
+		</div>
+		<div class="sub-sub-vid-2">
+			<h1 id="sub-sub-vid-2-h1">
+				HELLO 2024 !
+			</h1>
+			<div class="line">
+			
+			</div>
+		</div>
+	</div>
+	<div class="sub-vid">
+		<div class="sub-sub-vid">
+			<video loop muted autoplay="autoplay" id="vid-1">
+				<source src="img/vid-2.mp4" type="video/mp4">
+			</video>
+		</div>
+		<div class="sub-sub-vid-2">
+			<h1 id="sub-sub-vid-2-h1">
+				VANILLA CARAMELLO BODY LOTION
+			</h1>
+			<div class="line">
+			
+			</div>
+			<h1 id="sub-sub-vid-2-h1">
+				₹ 520
+			</h1>
+		</div>
+	</div>
+	<div class="sub-vid">
+		<div class="sub-sub-vid">
+			<video loop muted autoplay="autoplay" id="vid-1">
+				<source src="img/vid-3.mp4" type="video/mp4">
+			</video>
+		</div>
+		<div class="sub-sub-vid-2">
+			<h1 id="sub-sub-vid-2-h1">
+				BUTTER CREME MATTE LIPSTICK
+			</h1>
+			<div class="line">
+			
+			</div>
+			<h1 id="sub-sub-vid-2-h1">
+				₹ 325
+			</h1>
+		</div>
+	</div>
+	<div class="sub-vid">
+		<div class="sub-sub-vid">
+			<video loop muted autoplay="autoplay" id="vid-1">
+				<source src="img/vid-4.mp4" type="video/mp4">
+			</video>
+		</div>
+		<div class="sub-sub-vid-2">
+			<h1 id="sub-sub-vid-2-h1">
+				STARRY LIGHT EAU DE PARFUM
+			</h1>
+			<div class="line">
+			
+			</div>
+			<h1 id="sub-sub-vid-2-h1">
+				₹ 345
+			</h1>
+		</div>
+	</div>
+</div>
+<div class="selling">
+	<div class="sub-sell-1">
+		<h1 id="sub-sell-1-h1">Hot Selling</h1>
+	</div>
+	<div class="sub-sell-2">
+		<div class="sub-sell-img">
+			<img src="img/sell-1.webp">
+		</div>
+		<div class="sub-sell-img">
+			<img src="img/sell-2.webp">
+		</div>
+		<div class="sub-sell-img">
+			<img src="img/sell-3.webp">
+		</div>
+		<div class="sub-sell-img">
+			<img src="img/sell-4.webp">
+		</div>
+		<div class="sub-sell-img">
+			<img src="img/sell-5.webp">
+		</div>
+		<div class="sub-sell-img">
+			<img src="img/sell-6.webp">
+		</div>
+	</div>
+</div>
+<div class="blackboard">
+	<img src="img/blackboard.png">
+</div>
+<div class="guids">
+	<div class="sub-guid">
+		<h1 id="sub-guid-h1">Goodness Guids</h1>
+	</div>
+	<div class="slid-img">
+		<img src="img/guid-1.webp" id="img2">
+		<img src="img/guid-2.webp" id="img2">
+		<img src="img/guid-3.webp" id="img2">
+		<img src="img/guid-4.webp" id="img2">
+		<img src="img/guid-5.webp" id="img2">
+	</div>
+</div>
+<footer>
+	<div class="sub-foot">
+		<h1 id="sub-foot-h1">SHOP</h1>
+		<a href="#">SkinCare</a>
+		<a href="#">BodyCare</a>
+		<a href="#">MakeUp</a>
+		<a href="#">HairCare</a>
+		<a href="#">BabyCare</a>
+		<a href="#">Phy</a>
+	</div>
+	<div class="sub-foot">
+		<h1 id="sub-foot-h1">LEARN</h1>
+		<a href="#">plum blogs</a>
+		<a href="#">plum features</a>
+		<a href="#">plum rewards</a>
+		<a href="#">newsletters</a>
+	</div>
+	<div class="sub-foot">
+		<h1 id="sub-foot-h1">HELP</h1>
+		<a href="#">Contact Us</a>
+		<a href="#">Plicies</a>
+		<a href="#">Faqs</a>
+		<a href="#">empties4good</a>
+		<a href="#">Track Your Order</a>
+	</div>
+	<div class="sub-foot-4">
+		<div class="foot-text">
+			<p id="p1">
+				for exclusive previews, offers & all <br>
+				things beauty! we hate spam.
+			</p>
+		</div>
+		<div class="input">
+			<input type="text" placeholder="Your Email" id="inp-2">
+			<button id="f-btn">SUBSCRIBE</button>
+		</div>
+		<div class="social">
+			<i class="ri-facebook-circle-fill"></i>
+			<i class="ri-youtube-fill"></i>
+			<i class="ri-instagram-line"></i>
+			<i class="ri-twitter-fill"></i>
+		</div>
+		<div class="mail">
+			<a href="#">hello@plumgoodness.com</a>
+		</div>
+	</div>
+</footer>
+</body>
+</html>
+<script type="text/javascript">
+	
+	let sliders = document.querySelectorAll("#img")
+	let sliderindex = 0
+
+	function showsliders(index)
+	{
+		for(i = 0 ; i < sliders.length ; i++)
+		{
+			sliders[i].style.display="none";
+		}
+		sliders[index].style.display="block";
+	}
+	function startsliders()
+	{
+		setInterval(()=>{
+			showsliders(sliderindex)
+			sliderindex++
+
+			if(sliderindex >= sliders.length)
+			{
+				sliderindex = 0
+			}
+		},2000)
+	}
+	startsliders()
+	showsliders(sliderindex)
+
+
+
+
+
+	let sliders2 = document.querySelectorAll("#img2")
+	let sliderindex2 = 0
+
+	function showsliders2(index)
+	{
+		for(i = 0 ; i < sliders2.length ; i++)
+		{
+			sliders2[i].style.display="none";
+		}
+		sliders2[index].style.display="block";
+	}
+	function startsliders2()
+	{
+		setInterval(()=>{
+			showsliders2(sliderindex2)
+			sliderindex2++
+
+			if(sliderindex2 >= sliders2.length)
+			{
+				sliderindex2 = 0
+			}
+		},2000)
+	}
+	startsliders2()
+	showsliders2(sliderindex2)
+
+</script>
