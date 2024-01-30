@@ -1,0 +1,33 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.main{
+	margin-top: 10%;
+}
+#inp{
+	height: 50px;
+	width: 40%;
+	border: 2px solid #000;
+	position: absolute;
+	top: 80px;
+	right: 500px;
+	font-size: 20px;
+	padding-left: 2%;
+	font-family: monospace;
+	border-radius: 10px 10px 10px 10px;
+}
+#btn-2{
+	height: 50px;
+	width: 20%;
+	border: 2px solid red;
+	background-color: red;
+	color: #fff;
+	font-size: 20px;
+	font-family: monospace;
+	position: absolute;
+	top: 80px;
+	right: 230px;
+	border-radius: 10px 10px 10px 10px;
+}

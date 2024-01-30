@@ -1,0 +1,62 @@
+<!-- https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key} -->
+<!-- fbe788b3e926222b941999af9e82d5a2 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> weather </title>
+    <link rel="stylesheet" type="text/css" href="weatherstyle.css">
+</head>
+<body>
+    <input type="text" placeholder="Enter City For Weather" id="inp">
+    <button id="btn-2" onclick="fatchdata()">SEARCH</button>
+    <div class="main">
+
+    </div>
+</body>
+</html>
+<script>
+
+function fatchdata()
+{
+    let cityname = document.getElementById("inp").value
+    let Api = "fbe788b3e926222b941999af9e82d5a2"
+   	fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid=${Api}`)
+   	.then(function(responce){
+   		return responce.json()
+    })
+    .then(function(json){
+        console.log(json)
+        displayweather(json)
+    })
+    function displayweather(json)
+    {
+        let mintemp = document.createElement("h1")
+        mintemp.innerHTML = "Minimum Temprature : " + json.main.temp_min
+
+        let maxtemp = document.createElement("h1")
+        maxtemp.innerHTML = "Maximum Temprature : " + json.main.temp_max
+
+        let wind = document.createElement("h1")
+        wind.innerHTML = "Wind :"
+
+        let windetail = document.createElement("h1")
+        windetail.innerHTML = "Degree : " + json.wind.deg + "<br> gust : " + json.wind.gust + "<br> speed : " + json.wind.speed
+    
+        let clouds = document.createElement("h1")
+        clouds.innerHTML = `Clouds : ${json.clouds.all}`
+    
+        let sunrise = document.createElement("h1")
+        sunrise.innerHTML = `Sunrise : ${json.sys.sunrise}`
+
+        let sunset = document.createElement("h1")
+        sunset.innerHTML = `Sunset : ${json.sys.sunset}`
+
+        document.querySelector(".main").append(mintemp,maxtemp,wind,windetail,clouds,sunrise,sunset)
+    }
+
+    weather()
+}
+
+</script>
