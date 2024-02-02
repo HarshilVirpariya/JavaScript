@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> async </title>
+
+	<!--Google Fonts-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch:wght@300&family=Kanit:wght@100&family=Lumanosimo&family=Tektur&family=Ysabeau+SC:wght@200&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100&family=Chakra+Petch:wght@300&family=Kanit:wght@100&family=Michroma&family=Ysabeau+SC:wght@200&display=swap" rel="stylesheet">
+	<!--Google Fonts-->
+
+	<style type="text/css">
+		div{
+			display: flex;
+			justify-content: space-evenly;
+			text-align: center;
+			flex-wrap: wrap;
+			flex-direction: column;
+			border: 2px solid black;
+		}
+		h3{
+			font-size: 20px;
+			/*font-family: 'Advent Pro', sans-serif*/
+			font-family: 'Bebas Neue', sans-serif;
+			/*font-family: 'Chakra Petch', sans-serif;*/
+			/*font-family: 'Kanit', sans-serif;*/
+			/*font-family: 'Michroma', sans-serif;*/
+			/*font-family: 'Tektur', cursive;*/
+			/*font-family: 'Ysabeau SC', sans-serif;*/
+		}
+		h1{
+			/*font-family: 'Advent Pro', sans-serif*/
+			font-family: 'Bebas Neue', sans-serif;
+			/*font-family: 'Chakra Petch', sans-serif;*/
+			/*font-family: 'Kanit', sans-serif;*/
+			/*font-family: 'Michroma', sans-serif;*/
+			/*font-family: 'Tektur', cursive;*/
+			/*font-family: 'Ysabeau SC', sans-serif;*/
+		}
+		p{
+			/*font-family: 'Advent Pro', sans-serif*/
+			font-family: 'Bebas Neue', sans-serif;
+			/*font-family: 'Chakra Petch', sans-serif;*/
+			/*font-family: 'Kanit', sans-serif;*/
+			/*font-family: 'Michroma', sans-serif;*/
+			/*font-family: 'Tektur', cursive;*/
+			/*font-family: 'Ysabeau SC', sans-serif;*/
+		}
+
+	</style>
+</head>
+<body>
+	<div id="main"></div>
+</body>
+</html>
+<script type="text/javascript">
+	
+	async function fetchdata()
+	{
+		try
+		{
+			let res = await fetch('https://jsonplaceholder.typicode.com/posts')
+			let data = await res.json()
+			console.log(data)
+			displayDATA(data)
+		}
+		catch(Error)
+		{
+			console.log(Error)
+		}
+	}
+	fetchdata()
+
+	function displayDATA(json)
+	{
+		json.map((el)=>{
+
+			let div = document.createElement('div')
+
+			let h3 = document.createElement("h3")
+
+			h3.innerText = el.title
+
+			let h1 = document.createElement("h1")
+
+			h1.innerText = el.id
+
+			let p = document.createElement("p")
+
+			p.innerText = el.body
+
+			div.append(h1,h3,p)
+
+			document.querySelector("#main").append(div)
+		})
+	}
+
+</script>
