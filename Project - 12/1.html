@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 1 </title>
+    <link rel="stylesheet" href="https://fakestoreapi.com/products">
+    <style>
+#photo{
+    width: 200px;
+    height: 200px;
+}
+#main{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+    </style>
+</head>
+
+<body>
+    <select name="" id="sort-select">
+        <option value="high">Price high to low</option>
+        <option value="low">Price low to high </option>
+        <option value="az">Sort by A to Z</option>
+        <option value="za">sort by z to A</option>
+    </select>
+    <div id="cart"></div>
+    <div id="main">
+</body>
+</html>
+<script>
+let data = [
+    {
+        title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+        price: 109.95,
+        category: "men's clothing",
+        image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+            },
+            {
+         title: "Mens Casual Premium Slim Fit T-Shirts ",
+        price: 22.3,
+        category: "men's clothing",
+        image: "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
+            },
+            {
+        title: "Solid Gold Petite Micropave ",
+        price: 168,
+        category: "jewelery",
+        image: "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
+
+            },{
+        title: "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
+        price: 695,
+        category: "jewelery",
+        image: "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
+
+            },{
+        title: "White Gold Plated Princess",
+        price: 9.99,
+        category: "jewelery",
+        image: "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
+
+            },{
+        title: "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s",
+        price: 109,
+        category: "electronics",
+        image: "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
+
+            }
+]
+
+let cartbtn = document.createElement("button")
+cartbtn.innerHTML="cart"
+document.getElementById("cart").append(cartbtn)
+cartbtn.addEventListener("click",function(){
+    window.open("cart.html")
+})
+
+
+function displaydata(data){
+    document.getElementById("main").innerText=""
+    data.map((el,i)=>{
+        let div = document.createElement("div")
+         let pict=document.createElement("img")
+     pict.setAttribute("src",el.image)
+     pict.setAttribute("id","photo")
+
+     let tit = document.createElement("h1")
+     tit.innerText=el.title
+
+     let pri = document.createElement("h1")
+     pri.innerText="$"+el.price
+
+     let dri = document.createElement("h5")
+     dri.innerText=el.description
+
+     let catg = document.createElement("h5")
+     catg.innerText=el.category
+
+     let btn = document.createElement("button")
+     btn.innerText="Add To Cart"
+ btn.addEventListener("click",function(){
+    addtocart(i)
+ })
+
+
+     div.append(pict,tit,pri,dri,catg,btn)
+     document.querySelector("#main").append(div)
+    })
+}
+
+displaydata(data)
+
+let sortselect = document.getElementById("sort-select")
+sortselect.addEventListener("change",()=>{
+    let selected = sortselect.value
+    let selectedvalue=[]
+
+if(selected==="low"){
+selectedvalue=data.slice().sort((a,b)=>a.price-b.price)
+}else if(selected==="high"){
+    selectedvalue=data.slice().sort((a,b)=>b.price-a.price)   
+}else if(selected==="az")
+{
+    selectedvalue=data.slice().sort((a,b)=>a.title.localeCompare(b.title))
+}
+else if(selected==="za")
+{
+    selectedvalue=data.slice().sort((a,b)=>b.title.localeCompare(a.title))
+}
+displaydata(selectedvalue)
+
+
+})
+
+function addtocart(index){
+    let product = data.filter((el,i)=>{
+        return i===index
+      })
+
+ let products = JSON.parse(localStorage.getItem("cart")) ||[]
+products.push(product[0])
+localStorage.setItem("cart",JSON.stringify(products))
+}
+</script>
